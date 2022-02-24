@@ -1,3 +1,7 @@
+# Created by RickyBGamez (https://github.com/RickyBGamez/)
+# This script is licensed under the GNU General Public License v3.0.
+# Check the GitHub repository for more information. (https://github.com/RickyBGamez/Commit-Bot)
+
 ### Configuration
 # Logging Options
 LOG = True
