@@ -40,7 +40,7 @@ with open("cron.txt", "r") as f:
 # Logging.
 def log(message):
     if LOG:
-        with open(f"{LOG_FILE}", "a") as f:
+        with open(LOG_FILE, "a") as f:
             f.write(f"{message}\n")
             f.close()
 
