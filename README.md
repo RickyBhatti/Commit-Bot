@@ -30,7 +30,7 @@ If you've found a bug, you can go ahead and create an [issue](https://github.com
 If you've improved the resource, feel free to make a [pull request](https://github.com/RickyBGamez/DiscordAPI/pulls)!  
   
 ## License
-Copyright © 2021 [RickyBGamez](https://github.com/RickyBGamez).  
+Copyright © 2022 [RickyBGamez](https://github.com/RickyBGamez).  
 This project is [GNU GPL v3.0](https://github.com/RickyBGamez/DiscordAPI/blob/main/LICENSE) licensed.
 
 ## Disclaimers
