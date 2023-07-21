@@ -35,4 +35,4 @@ This project is [GNU GPL v3.0](https://github.com/RickyBhatti/Commit-Bot/blob/ma
 
 ## Disclaimers
 - I'm not responsible for any damages that may occur. This includes, but is not limited to, any damages caused by the script, any damages caused by the script's configuration, or any damages caused by the script's usage. (Even though this is literally impossible, but, someone will find a way.)
-- This script was designed purely out of my own personal interest, since I got bored during a week off. (I'm not using this script, for anyone curious.)
+- This script was designed purely out of my own personal interest, since I got bored during a week off. (I'm not using this script, for anyone curious, which is pretty obvious.)
