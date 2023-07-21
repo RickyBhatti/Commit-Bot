@@ -1,7 +1,7 @@
 # Commit Bot
 Automatically generate GitHub activity!  
 
-We've all wanted to be the developer that commits every day, but that requires a lot of work. Let's automate it! This bot will automatically generate commit(s) everyday, and push them to your GitHub account, allowing you to get that green contributions graph! (Check out the Disclaimers section below for more information.)  
+We've all wanted to be the developer that commits every day, but that requires a lot of work. Let's automate it! This bot will automatically generate commit(s) every day, and push them to your GitHub account, allowing you to get that green contributions graph! (Check out the Disclaimers section below for more information.)  
 
 Truthfully, I wouldn't use this. No one cares about your commits. I just got bored one day and decided to make it for fun.  
 
@@ -18,7 +18,7 @@ Truthfully, I wouldn't use this. No one cares about your commits. I just got bor
 - `OUTPUT_FILE`: The file to write the output to. (The file that is commited to GitHub) [Default: `commit_bot.txt`]
 
 ## Usage
-- Create a private (or public, if you want everyone to see for some reason) repository on GitHub. (Initialize the repository)
+- Create a private (or public, if you want everyone to see it for some reason) repository on GitHub. (Initialize the repository)
 - Clone the newly created repository to your machine.
     - Ensure that you're able to execute `git` commands within the directory. As this is required for the script to work. (This may require you to log in to your GitHub account within the directory so that you are able to execute `git` commands.)
 - Download this script and place it in the repository's directory.
@@ -26,12 +26,12 @@ Truthfully, I wouldn't use this. No one cares about your commits. I just got bor
     - The first time the script is run, it will create a cronjob that runs the script at the configured time. (This is done automatically. Once the cronjob has been created, the script will not edit it. If you'd like to change the time, you'd need to either delete the cronjob manually and edit the time in the script configuration, or edit the cronjob manually)
 
 ## Contributions
-If you've found a bug, you can go ahead and create an [issue](https://github.com/RickyBGamez/DiscordAPI/issues).  
-If you've improved the resource, feel free to make a [pull request](https://github.com/RickyBGamez/DiscordAPI/pulls)!  
+If you've found a bug, you can go ahead and create an [issue](https://github.com/RickyBhatti/Commit-Bot/issues).  
+If you've improved the resource, feel free to make a [pull request](https://github.com/RickyBhatti/Commit-Bot/pulls)!  
   
 ## License
-Copyright © 2022 [RickyBGamez](https://github.com/RickyBGamez).  
-This project is [GNU GPL v3.0](https://github.com/RickyBGamez/DiscordAPI/blob/main/LICENSE) licensed.
+Copyright © 2023 [Ricky Bhatti](https://github.com/RickyBhatti).  
+This project is [GNU GPL v3.0](https://github.com/RickyBhatti/Commit-Bot/blob/main/LICENSE) licensed.
 
 ## Disclaimers
 - I'm not responsible for any damages that may occur. This includes, but is not limited to, any damages caused by the script, any damages caused by the script's configuration, or any damages caused by the script's usage. (Even though this is literally impossible, but, someone will find a way.)
