@@ -39,6 +39,7 @@ with open("cron.txt", "r") as f:
 
 # Logging.
 def log(message):
+    print(message)
     if LOG:
         with open(LOG_FILE, "a") as f:
             f.write(f"{message}\n")
@@ -51,16 +52,6 @@ def create_commit():
         f.close()
     system(f"git add {OUTPUT_FILE}")
     system(f"git commit -m \"Update {OUTPUT_FILE}\"")
-
-# Execute the script.
-if (random() > NO_COMMIT_CHANCE):
-    commits = randint(0, MAX_COMMITS)
-    # for i in range(commits): # TODO: Re-enable this later.
-    #     create_commit()
-    # system("git push")
-    log(f"[{datetime.now()}] Sucessfully committed {commits} time(s).")
-else:
-    log(f"[{datetime.now()}] No commits were made.")
 
 # Parse the arguments.
 def parse_args():
@@ -80,5 +71,18 @@ def parse_args():
 
 if __name__ == "__main__":
     start_date, end_date = parse_args()
-    print(start_date, " - ", end_date)
-    pass
+    
+    if start_date and end_date:
+        log(f"Dates provided: {start_date} - {end_date}, running in manual mode.")
+        
+    else:
+        log(f"No dates were provided. Running in cron mode.")
+        # Execute the script.
+        if (random() > NO_COMMIT_CHANCE):
+            commits = randint(0, MAX_COMMITS)
+            # for i in range(commits): # TODO: Re-enable this later.
+            #     create_commit()
+            # system("git push")
+            log(f"[{datetime.now()}] Sucessfully committed {commits} time(s).")
+        else:
+            log(f"[{datetime.now()}] No commits were made.")
