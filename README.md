@@ -30,7 +30,7 @@ If you've found a bug, you can go ahead and create an [issue](https://github.com
 If you've improved the resource, feel free to make a [pull request](https://github.com/RickyBhatti/Commit-Bot/pulls)!  
   
 ## License
-Copyright © 2023 [Ricky Bhatti](https://github.com/RickyBhatti).  
+Copyright © 2025 [Ricky Bhatti](https://github.com/RickyBhatti).  
 This project is [GNU GPL v3.0](https://github.com/RickyBhatti/Commit-Bot/blob/main/LICENSE) licensed.
 
 ## Disclaimers
