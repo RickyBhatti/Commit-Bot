@@ -22,7 +22,7 @@ from sys import argv
 from pathlib import Path
 from os import system # Executing the Git commands.
 from random import random, randint # Generating a random float between 0 and 1.
-from datetime import datetime # Date and time for our file.
+from datetime import datetime, date # Date and time for our file.
 
 # Check if a cronjob exists for this script, if not, create it using crontab.
 system("crontab -l > cron.txt")
@@ -55,9 +55,30 @@ def create_commit():
 # Execute the script.
 if (random() > NO_COMMIT_CHANCE):
     commits = randint(0, MAX_COMMITS)
-    for i in range(commits):
-        create_commit()
-    system("git push")
+    # for i in range(commits): # TODO: Re-enable this later.
+    #     create_commit()
+    # system("git push")
     log(f"[{datetime.now()}] Sucessfully committed {commits} time(s).")
 else:
     log(f"[{datetime.now()}] No commits were made.")
+
+# Parse the arguments.
+def parse_args():
+    if len(argv) == 1:
+        return None, None
+    
+    try: 
+        if len(argv) == 2:
+            return datetime.strptime(argv[1], "%m-%d-%Y"), date.today().strftime("%m-%d-%Y")
+    
+        return datetime.strptime(argv[1], "%m-%d-%Y"), datetime.strptime(argv[2], "%m-%d-%Y")
+    except ValueError:
+        print("Invalid date format. Please use the following format: MM-DD-YYYY.")
+        exit(1)
+
+    return None, None # Should never reach this point.
+
+if __name__ == "__main__":
+    start_date, end_date = parse_args()
+    print(start_date, " - ", end_date)
+    pass

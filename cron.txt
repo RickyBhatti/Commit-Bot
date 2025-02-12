@@ -1,0 +1,1 @@
+0 12 * * * cd D:\Documents\GitHub\Commit-Bot && python3 commit_bot.py
