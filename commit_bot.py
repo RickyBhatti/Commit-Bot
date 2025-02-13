@@ -65,7 +65,7 @@ def parse_args():
     
     try: 
         if len(argv) == 2:
-            return datetime.strptime(argv[1], "%m-%d-%Y"), date.today().strftime("%m-%d-%Y")
+            return datetime.strptime(argv[1], "%m-%d-%Y"), datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
     
         return datetime.strptime(argv[1], "%m-%d-%Y"), datetime.strptime(argv[2], "%m-%d-%Y")
     except ValueError:
