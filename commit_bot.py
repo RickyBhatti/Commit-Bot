@@ -39,10 +39,11 @@ with open("cron.txt", "r") as f:
 
 # Logging.
 def log(message):
-    print(message)
+    timestamp = datetime.now()
+    print(f"[{timestamp}] {message}")
     if LOG:
         with open(LOG_FILE, "a") as f:
-            f.write(f"{message}\n")
+            f.write(f"[{timestamp}] {message}\n")
             f.close()
 
 # Create our commit.
@@ -84,7 +85,7 @@ if __name__ == "__main__":
                 # create_commit(current_date.strftime("%Y-%m-%d %H:%M:%S"))
                 pass
             # system("git push")
-            log(f"[{datetime.now()}] Sucessfully committed {commits} time(s).")
+            log(f"Sucessfully committed {commits} time(s).")
             current_date += timedelta(days=1)
     else:
         log(f"No dates were provided. Running in cron mode.")
@@ -95,6 +96,6 @@ if __name__ == "__main__":
                 # create_commit()
                 pass
             # system("git push")
-            log(f"[{datetime.now()}] Sucessfully committed {commits} time(s).")
+            log(f"Sucessfully committed {commits} time(s).")
         else:
-            log(f"[{datetime.now()}] No commits were made.")
+            log(f"No commits were made.")
