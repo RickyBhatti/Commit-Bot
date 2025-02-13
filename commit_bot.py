@@ -1,5 +1,5 @@
 # Created by Ricky (https://github.com/RickyBhatti/)
-# This script is licensed under the GNU General Public License v3.0.
+# This script is licensed under the GNU General Public License v3.0 (Refer to the LICENSE file for more information).
 # Check the GitHub repository for more information. (https://github.com/RickyBhatti/Commit-Bot)
 
 ### Configuration
