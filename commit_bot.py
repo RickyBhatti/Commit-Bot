@@ -22,7 +22,7 @@ from sys import argv
 from pathlib import Path
 from os import system # Executing the Git commands.
 from random import random, randint # Generating a random float between 0 and 1.
-from datetime import datetime, date, timedelta # Date and time for our file.
+from datetime import datetime, timedelta # Date and time for our file.
 
 # Check if a cronjob exists for this script, if not, create it using crontab.
 def check_cronjob():
