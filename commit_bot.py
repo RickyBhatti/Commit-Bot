@@ -93,6 +93,7 @@ if __name__ == "__main__":
             commits = randint(0, MAX_COMMITS)
             for i in range(commits): # TODO: Re-enable this later.
                 # create_commit()
+                pass
             # system("git push")
             log(f"[{datetime.now()}] Sucessfully committed {commits} time(s).")
         else:
