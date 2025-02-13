@@ -46,12 +46,15 @@ def log(message):
             f.close()
 
 # Create our commit.
-def create_commit():
+def create_commit(commit_date):
     with open(OUTPUT_FILE, "w") as f:
         f.write(str(datetime.now()))
         f.close()
     system(f"git add {OUTPUT_FILE}")
-    system(f"git commit -m \"Update {OUTPUT_FILE}\"")
+    if commit_date:
+        system(f"git commit --date \"{commit_date}\" -m \"Update {OUTPUT_FILE}\"")
+    else:
+        system(f"git commit -m \"Update {OUTPUT_FILE}\"")
 
 # Parse the arguments.
 def parse_args():
@@ -78,7 +81,7 @@ if __name__ == "__main__":
         while current_date <= end_date:
             commits = randint(0, MAX_COMMITS)
             for i in range(commits):
-                # create_commit() # TODO: Update to take in a date for the commit date.
+                # create_commit(current_date.strftime("%Y-%m-%d %H:%M:%S"))
                 pass
             # system("git push")
             log(f"[{datetime.now()}] Sucessfully committed {commits} time(s).")
