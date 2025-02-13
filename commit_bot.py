@@ -84,9 +84,9 @@ if __name__ == "__main__":
             for i in range(commits):
                 # create_commit(current_date.strftime("%Y-%m-%d %H:%M:%S"))
                 pass
-            # system("git push")
-            log(f"Sucessfully committed {commits} time(s).")
-            current_date += timedelta(days=1)
+            log(f"Sucessfully committed {commits} time(s) on {current_date.strftime('%m-%d-%Y')}.")
+        # system("git push")
+        current_date += timedelta(days=1)
     else:
         log(f"No dates were provided. Running in cron mode.")
         # Execute the script.
