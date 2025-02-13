@@ -22,7 +22,7 @@ from sys import argv
 from pathlib import Path
 from os import system # Executing the Git commands.
 from random import random, randint # Generating a random float between 0 and 1.
-from datetime import datetime, date # Date and time for our file.
+from datetime import datetime, date, timedelta # Date and time for our file.
 
 # Check if a cronjob exists for this script, if not, create it using crontab.
 system("crontab -l > cron.txt")
@@ -74,14 +74,22 @@ if __name__ == "__main__":
     
     if start_date and end_date:
         log(f"Dates provided: {start_date} - {end_date}, running in manual mode.")
-        
+        current_date = start_date
+        while current_date <= end_date:
+            commits = randint(0, MAX_COMMITS)
+            for i in range(commits):
+                # create_commit() # TODO: Update to take in a date for the commit date.
+                pass
+            # system("git push")
+            log(f"[{datetime.now()}] Sucessfully committed {commits} time(s).")
+            current_date += timedelta(days=1)
     else:
         log(f"No dates were provided. Running in cron mode.")
         # Execute the script.
         if (random() > NO_COMMIT_CHANCE):
             commits = randint(0, MAX_COMMITS)
-            # for i in range(commits): # TODO: Re-enable this later.
-            #     create_commit()
+            for i in range(commits): # TODO: Re-enable this later.
+                # create_commit()
             # system("git push")
             log(f"[{datetime.now()}] Sucessfully committed {commits} time(s).")
         else:
